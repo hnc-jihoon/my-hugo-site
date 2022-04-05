@@ -1,0 +1,12 @@
+{
+  "name": "my-hugo-site",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/hnc-jihoon/my-hugo-site.git",
+  "author": "hnc-jihoon <82790390+hnc-jihoon@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
