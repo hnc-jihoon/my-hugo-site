@@ -1,4 +1,4 @@
-// Note: We're using the CDN in "production".
+// Note: We're using the CDN
 import * as React from 'react'
 import * as ReactDOM from 'react-dom';
 
