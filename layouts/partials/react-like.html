@@ -1,16 +1,4 @@
-{{ if hugo.IsProduction }}
-  {{/* We import from node_modules in development to get code completion etc. working. */}}
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
-{{ end }}
-
+<!-- use React library in node_modules: no shims -->
 <div id="like_button_container"></div>
-{{ $shims := dict }}
-{{ $defines := dict }}
-{{ if hugo.IsProduction }}
-  {{ $shims = dict "react" "js/shims/react.js"  "react-dom" "js/shims/react-dom.js" }}
-{{ else }}
-  {{ $defines = dict "process.env.NODE_ENV" `"development"` }}
-{{ end }}
-{{ $js := resources.Get "js/like.jsx" | js.Build (dict "shims" $shims "defines" $defines ) }}
+{{ $js := resources.Get "js/like.jsx" | js.Build }}
 <script src="{{ $js.RelPermalink }}"></script>

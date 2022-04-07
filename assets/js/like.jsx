@@ -1,4 +1,3 @@
-// Note: We're using the CDN in "production".
 import * as React from 'react'
 import * as ReactDOM from 'react-dom';
 
