@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 
 // A simple React JSX component.
 class LikeButton extends React.Component {
@@ -23,4 +23,5 @@ class LikeButton extends React.Component {
   
 
 const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(<LikeButton />, domContainer);
+const root = ReactDOM.createRoot(domContainer);
+root.render(<LikeButton />);
