@@ -1,0 +1,3 @@
+<div id="dislike_button_container"></div>
+{{ $js := resources.Get "js/dislike.jsx" | js.Build }}
+<script src="{{ $js.RelPermalink }}"></script>
