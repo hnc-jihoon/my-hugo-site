@@ -1,0 +1,7 @@
+<!-- TODO: support SCSS -->
+<link rel="stylesheet" href="{{ `css/MenuBarComponent.css` | relURL }}"/>
+
+<div id="menu_bar_container"></div>
+<!-- TODO: find a better way to handle the baseURL -->
+{{ $js := resources.Get "js/MenuBarComponent/MenuBarComponent.jsx" | js.Build (dict "params" (dict "baseURL" .Site.BaseURL)) }}
+<script src="{{ $js.RelPermalink }}"></script>

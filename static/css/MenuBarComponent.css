@@ -1,0 +1,351 @@
+/*
+ * Copyright 2021 HANCOM Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#menu_bar_common_attributes {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  /* opacity를 사용하면 child element에서 opacity 변경을 해주지 못한다. 따라서 rgba를 사용해야한다. */
+  /*
+  opacity: 0.2;
+  background-color: #000000;
+  */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu_bar.scroll {
+  background-image: linear-gradient(124deg, #182461 23%, #26328c 51%);
+}
+
+#menu_bar_box_common_attributes {
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+#menu_bar_logo_common_attributes {
+  /* TODO: fix URL */
+  background: url("../images/MenuBarComponent/bi_white.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  object-fit: contain;
+}
+
+.menu_bar_logo {
+  width: 206px;
+  height: 26px;
+}
+
+.menu_bar_logo:hover {
+  cursor: pointer;
+}
+
+#menu_bar_menu_button_common_attributes {
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.menu_bar_slide_menu {
+  position: absolute;
+  width: 360px;
+  height: 100vh;
+  top: 0;
+  left: -100%;
+  transition: 0.5s ease;
+  background-color: #fff;
+}
+
+.menu_bar_slide_menu.on {
+  transition: 0.5s ease;
+  left: 0;
+}
+
+#menu_bar_slide_menu_logo_common_attributes {
+    /* TODO: fix URL */
+    background: url("../images/MenuBarComponent/bi_color.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    object-fit: contain;
+}
+
+#menu_bar_slide_menu_link_container_common_attributes {
+  width: fit-content;
+  height: fit-content;
+  left: 24px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  list-style: none;
+}
+
+#menu_bar_slide_menu_link_box_common_attributes {
+  height: 66px;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.menu_bar_slide_menu_link {
+  width: fit-content;
+  height: fit-content;
+  top: 20px;
+  position: absolute;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+
+.menu_bar_slide_menu_github_link_grid {
+  width: fit-content;
+  height: fit-content;
+  top: 20px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  list-style: none;
+}
+
+.menu_bar_slide_menu_link_github_logo {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  object-fit: contain;
+  vertical-align: sub;
+}
+
+#menu_bar_slide_menu_line_common_attributes {
+  height: 1px;
+  position: relative;
+  opacity: 0.6;
+  transition: 0.5s ease;
+  background-color: #e6e9ea;
+}
+
+.body_opacity {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.body_opacity.on {
+  display: block;
+  animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  animation-fill-mode: forwards; /* keyframe에 의해 설정된 계산 값 유지 */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+@media (min-width: 1281px) {
+  .menu_bar_box {
+    width: 1232px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu_bar {
+    height: 64px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .menu_bar {
+    height: 56px;
+  }
+}
+
+@media (1024px <= width <= 1280px) {
+  .menu_bar_box {
+    width: 944px;
+  }
+}
+
+@media (768px <= width <= 1023px) {
+  .menu_bar_menu_button {
+    /* TODO: fix URL */
+    background: url("../images/MenuBarComponent/ic40_menu.svg") no-repeat;
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    left: 16px;
+  }
+
+  .menu_bar_logo_small {
+    width: 190.4px;
+    height: 24px;
+    top: 16px;
+    left: 72px;
+    position: absolute;
+  }
+
+  .menu_bar_slide_menu {
+    width: 360px;
+  }
+
+  .menu_bar_slide_menu_logo {
+    width: 191px;
+    height: 24px;
+    top: 16px;
+    left: 24px;
+  }
+
+  .menu_bar_slide_menu_link_container {
+    top: 80px;
+  }
+
+  .menu_bar_slide_menu_link_box {
+    width: 312px;
+  }
+
+  .menu_bar_slide_menu_line {
+    width: 312px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu_bar_menu_button {
+    /* TODO: fix URL */
+    background: url("../images/MenuBarComponent/ic24_menu.svg") no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .menu_bar_logo_small {
+    width: 173.1px;
+    height: 22px;
+    top: 17px;
+    left: 56px;
+    position: absolute;
+  }
+
+  .menu_bar_slide_menu {
+    width: 264px;
+  }
+
+  .menu_bar_slide_menu_logo {
+    width: 173px;
+    height: 22px;
+    top: 17px;
+    left: 24px;
+  }
+
+  .menu_bar_slide_menu_link_container {
+    top: 79px;
+  }
+
+  .menu_bar_slide_menu_link_box {
+    width: 216px;
+  }
+
+  .menu_bar_slide_menu_line {
+    width: 216px;
+  }
+}
+
+.menu_bar_logo_small:hover {
+  cursor: pointer;
+}
+
+.menu_bar_link_github_logo {
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  object-fit: contain;
+  vertical-align: sub;
+}
+
+.menu_bar_link_list {
+  /* margin과 padding을 주지 않아도 브라우저가 자동으로 값을 주는 경우가 있기에 명시적으로 해당 값들이 없다는 코드를 작성해야한다. */
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 48px;
+  list-style: none;
+}
+
+.menu_bar_link {
+  width: auto;
+  height: 16px;
+  margin: 0px 0px 4px 0px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu_bar_link.opacity {
+  opacity: 0.6;
+}
+
+.menu_bar_link:hover {
+  text-decoration-line: underline;
+  /* height 1px */
+  text-decoration-thickness: 1px;
+  /* 글자와 4px 떨어짐 */
+  text-underline-offset: 4px;
+}
