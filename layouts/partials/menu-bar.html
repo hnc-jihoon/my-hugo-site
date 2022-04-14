@@ -1,5 +1,6 @@
-<!-- TODO: support SCSS -->
-<link rel="stylesheet" href="{{ `css/MenuBarComponent.css` | relURL }}"/>
+{{ $sassTemplate := resources.Get "css/MenuBarComponent.scss" }}
+{{ $style := $sassTemplate | resources.ExecuteAsTemplate "MenuBar.scss" . | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 <div id="menu_bar_container"></div>
 <!-- TODO: find a better way to handle the baseURL -->
