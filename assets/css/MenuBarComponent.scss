@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+$url_bi_white: url( {{.Site.BaseURL}}images/MenuBarComponent/bi_white.svg );
+$url_bi_color: url( {{.Site.BaseURL}}images/MenuBarComponent/bi_color.svg );
+$url_ic40_menu: url( {{.Site.BaseURL}}images/MenuBarComponent/ic40_menu.svg );
+$url_ic24_menu: url( {{.Site.BaseURL}}images/MenuBarComponent/ic24_menu.svg );
+
 #menu_bar_common_attributes {
   width: 100%;
   position: fixed;
@@ -41,8 +46,7 @@
 }
 
 #menu_bar_logo_common_attributes {
-  /* TODO: fix URL */
-  background: url("../images/MenuBarComponent/bi_white.svg");
+  background: $url_bi_white;
   background-size: 100% 100%;
   background-position: center;
   object-fit: contain;
@@ -81,8 +85,7 @@
 }
 
 #menu_bar_slide_menu_logo_common_attributes {
-    /* TODO: fix URL */
-    background: url("../images/MenuBarComponent/bi_color.svg");
+    background: $url_bi_color;
     background-size: 100% 100%;
     background-position: center;
     position: absolute;
@@ -211,16 +214,15 @@
   }
 }
 
-@media (1024px <= width <= 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .menu_bar_box {
     width: 944px;
   }
 }
 
-@media (768px <= width <= 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .menu_bar_menu_button {
-    /* TODO: fix URL */
-    background: url("../images/MenuBarComponent/ic40_menu.svg") no-repeat;
+    background: $url_ic40_menu no-repeat;
     width: 40px;
     height: 40px;
     top: 8px;
@@ -261,8 +263,7 @@
 
 @media (max-width: 767px) {
   .menu_bar_menu_button {
-    /* TODO: fix URL */
-    background: url("../images/MenuBarComponent/ic24_menu.svg") no-repeat;
+    background: $url_ic24_menu no-repeat;
     width: 24px;
     height: 24px;
     top: 16px;
