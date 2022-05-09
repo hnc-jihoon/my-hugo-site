@@ -15,16 +15,19 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      # ref) https://github.com/marketplace/actions/github-action-for-yarn
-      - name: Setup Yarn
-        uses: borales/actions-yarn@v2.3.0
+      # ref) https://github.com/actions/setup-node
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          cmd: install      # will run `yarn install` command
+          node-version: 16
+
+      - name: Yarn install
+        run: yarn
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
