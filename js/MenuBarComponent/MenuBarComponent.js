@@ -24226,7 +24226,7 @@
   var import_react_responsive = __toESM(require_react_responsive());
 
   // ns-params:@params
-  var baseURL = "/";
+  var baseURL = "https://hnc-jihoon.github.io/my-hugo-site/";
 
   // <stdin>
   var baseURL2 = baseURL || "/";

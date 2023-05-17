@@ -38,7 +38,7 @@
   position: absolute; }
 
 #menu_bar_logo_common_attributes {
-  background: url(/images/MenuBarComponent/bi_white.svg);
+  background: url(https://hnc-jihoon.github.io/my-hugo-site/images/MenuBarComponent/bi_white.svg);
   background-size: 100% 100%;
   background-position: center;
   object-fit: contain; }
@@ -71,7 +71,7 @@
   left: 0; }
 
 #menu_bar_slide_menu_logo_common_attributes {
-  background: url(/images/MenuBarComponent/bi_color.svg);
+  background: url(https://hnc-jihoon.github.io/my-hugo-site/images/MenuBarComponent/bi_color.svg);
   background-size: 100% 100%;
   background-position: center;
   position: absolute;
@@ -185,7 +185,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .menu_bar_menu_button {
-    background: url(/images/MenuBarComponent/ic40_menu.svg) no-repeat;
+    background: url(https://hnc-jihoon.github.io/my-hugo-site/images/MenuBarComponent/ic40_menu.svg) no-repeat;
     width: 40px;
     height: 40px;
     top: 8px;
@@ -212,7 +212,7 @@
 
 @media (max-width: 767px) {
   .menu_bar_menu_button {
-    background: url(/images/MenuBarComponent/ic24_menu.svg) no-repeat;
+    background: url(https://hnc-jihoon.github.io/my-hugo-site/images/MenuBarComponent/ic24_menu.svg) no-repeat;
     width: 24px;
     height: 24px;
     top: 16px;
